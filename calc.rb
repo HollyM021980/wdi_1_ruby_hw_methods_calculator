@@ -80,17 +80,17 @@ def perform_operation(operation, left_operand, right_operand)
 end
 
 def output_result(operation, result, left, right)
-  puts "\n\nRESULT:"
+  puts "\n\nRESULT ==>"
   if operation == ""
     puts "Unknown operation - no result to report"
   else
-    puts "#{operation}(#{left}, #{right}) = #{result}"
+    puts "    #{operation}(#{left}, #{right}) = #{result}"
   end
-  puts "\n"
 end
 
 
 # Call the things :)
+puts "\n\n****** Simple Calcuator *******\n\n"
 operation = operations_menu
 unless operation == ""
   left = get_operand('left')
@@ -98,4 +98,5 @@ unless operation == ""
   result = perform_operation(operation, left, right)
   output_result(operation, result,left, right)
 end
+puts "\n\n****** All done!! *******\n\n"
 
